@@ -9,7 +9,7 @@ defmodule TmsApi.Repo.Migrations.CreateTrucks do
       add :production_year, :integer
       add :stnk_file, :string
       add :kir_file, :string
-      add :status, :boolean, default: false, null: false
+      add :status, :boolean, default: true, null: false
 
       timestamps()
     end
