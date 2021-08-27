@@ -8,10 +8,7 @@ defmodule TmsApiWeb.Router do
   scope "/api", TmsApiWeb do
     pipe_through :api
     resources "/trucks", TruckController, except: [:new, :edit]
-    get "/shipmentlist", ShipmentListController, :index
-    get "/shipmentlist/:id", ShipmentListController, :show
-    post "/shipmentlist/add", ShipmentListController, :create
-    post "/shipmentlist/update", ShipmentListController, :update
+    resources "/shipmentlist", ShipmentListController, except: [:new, :edit]
     resources "/drivers", DriverController, except: [:new, :edit]
   end
 
