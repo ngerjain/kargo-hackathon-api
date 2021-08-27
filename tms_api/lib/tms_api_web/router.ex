@@ -12,6 +12,7 @@ defmodule TmsApiWeb.Router do
     get "/shipmentlist/:id", ShipmentListController, :show
     post "/shipmentlist/add", ShipmentListController, :create
     post "/shipmentlist/update", ShipmentListController, :update
+    resources "/drivers", DriverController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
