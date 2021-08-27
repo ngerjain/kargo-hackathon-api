@@ -5,7 +5,6 @@ defmodule TmsApi.Unit do
 
   import Ecto.Query, warn: false
   alias TmsApi.Repo
-
   alias TmsApi.Unit.Truck
 
   @doc """
