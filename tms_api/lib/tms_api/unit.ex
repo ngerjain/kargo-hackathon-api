@@ -1,26 +1,11 @@
-<<<<<<< HEAD:tms_api/lib/tms_api/shipment.ex
-defmodule TmsApi.Shipment do
-  @moduledoc """
-  The Shipment context.
-=======
 defmodule TmsApi.Unit do
   @moduledoc """
   The Unit context.
->>>>>>> fix(trucks): module structure (#13):tms_api/lib/tms_api/unit.ex
   """
 
   import Ecto.Query, warn: false
   alias TmsApi.Repo
-
-<<<<<<< HEAD:tms_api/lib/tms_api/shipment.ex
-<<<<<<< HEAD:tms_api/lib/tms_api/schema.ex
-  alias TmsApi.Schema.Truck
-=======
-  alias TmsApi.Shipment.ShipmentList
->>>>>>> Add Shipment:tms_api/lib/tms_api/shipment.ex
-=======
   alias TmsApi.Unit.Truck
->>>>>>> fix(trucks): module structure (#13):tms_api/lib/tms_api/unit.ex
 
   @doc """
   Returns the list of trucks.

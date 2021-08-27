@@ -1,118 +1,104 @@
-<<<<<<< HEAD:tms_api/lib/tms_api/shipment.ex
 defmodule TmsApi.Shipment do
   @moduledoc """
   The Shipment context.
-=======
-defmodule TmsApi.Unit do
-  @moduledoc """
-  The Unit context.
->>>>>>> fix(trucks): module structure (#13):tms_api/lib/tms_api/unit.ex
   """
 
   import Ecto.Query, warn: false
   alias TmsApi.Repo
 
-<<<<<<< HEAD:tms_api/lib/tms_api/shipment.ex
-<<<<<<< HEAD:tms_api/lib/tms_api/schema.ex
-  alias TmsApi.Schema.Truck
-=======
   alias TmsApi.Shipment.ShipmentList
->>>>>>> Add Shipment:tms_api/lib/tms_api/shipment.ex
-=======
-  alias TmsApi.Unit.Truck
->>>>>>> fix(trucks): module structure (#13):tms_api/lib/tms_api/unit.ex
 
   @doc """
-  Returns the list of trucks.
+  Returns the list of shipmentlist.
 
   ## Examples
 
-      iex> list_trucks()
-      [%Truck{}, ...]
+      iex> list_shipmentlist()
+      [%ShipmentList{}, ...]
 
   """
-  def list_trucks do
-    Repo.all(Truck)
+  def list_shipmentlist do
+    Repo.all(ShipmentList)
   end
 
   @doc """
-  Gets a single truck.
+  Gets a single shipment_list.
 
-  Raises `Ecto.NoResultsError` if the Truck does not exist.
+  Raises `Ecto.NoResultsError` if the Shipment list does not exist.
 
   ## Examples
 
-      iex> get_truck!(123)
-      %Truck{}
+      iex> get_shipment_list!(123)
+      %ShipmentList{}
 
-      iex> get_truck!(456)
+      iex> get_shipment_list!(456)
       ** (Ecto.NoResultsError)
 
   """
-  def get_truck!(id), do: Repo.get!(Truck, id)
+  def get_shipment_list!(id), do: Repo.get!(ShipmentList, id)
 
   @doc """
-  Creates a truck.
+  Creates a shipment_list.
 
   ## Examples
 
-      iex> create_truck(%{field: value})
-      {:ok, %Truck{}}
+      iex> create_shipment_list(%{field: value})
+      {:ok, %ShipmentList{}}
 
-      iex> create_truck(%{field: bad_value})
+      iex> create_shipment_list(%{field: bad_value})
       {:error, %Ecto.Changeset{}}
 
   """
-  def create_truck(attrs \\ %{}) do
-    %Truck{}
-    |> Truck.changeset(attrs)
+  def create_shipment_list(attrs \\ %{}) do
+    %ShipmentList{}
+    |> ShipmentList.changeset(attrs)
     |> Repo.insert()
   end
 
   @doc """
-  Updates a truck.
+  Updates a shipment_list.
 
   ## Examples
 
-      iex> update_truck(truck, %{field: new_value})
-      {:ok, %Truck{}}
+      iex> update_shipment_list(shipment_list, %{field: new_value})
+      {:ok, %ShipmentList{}}
 
-      iex> update_truck(truck, %{field: bad_value})
+      iex> update_shipment_list(shipment_list, %{field: bad_value})
       {:error, %Ecto.Changeset{}}
 
   """
-  def update_truck(%Truck{} = truck, attrs) do
-    truck
-    |> Truck.changeset(attrs)
+  def update_shipment_list(%ShipmentList{} = shipment_list, attrs) do
+    shipment_list
+    |> ShipmentList.changeset(attrs)
     |> Repo.update()
   end
 
   @doc """
-  Deletes a truck.
+  Deletes a shipment_list.
 
   ## Examples
 
-      iex> delete_truck(truck)
-      {:ok, %Truck{}}
+      iex> delete_shipment_list(shipment_list)
+      {:ok, %ShipmentList{}}
 
-      iex> delete_truck(truck)
+      iex> delete_shipment_list(shipment_list)
       {:error, %Ecto.Changeset{}}
 
   """
-  def delete_truck(%Truck{} = truck) do
-    Repo.delete(truck)
+  def delete_shipment_list(%ShipmentList{} = shipment_list) do
+    Repo.delete(shipment_list)
   end
 
   @doc """
-  Returns an `%Ecto.Changeset{}` for tracking truck changes.
+  Returns an `%Ecto.Changeset{}` for tracking shipment_list changes.
 
   ## Examples
 
-      iex> change_truck(truck)
-      %Ecto.Changeset{data: %Truck{}}
+      iex> change_shipment_list(shipment_list)
+      %Ecto.Changeset{data: %ShipmentList{}}
 
   """
-  def change_truck(%Truck{} = truck, attrs \\ %{}) do
-    Truck.changeset(truck, attrs)
+  def change_shipment_list(%ShipmentList{} = shipment_list, attrs \\ %{}) do
+    ShipmentList.changeset(shipment_list, attrs)
   end
 end
