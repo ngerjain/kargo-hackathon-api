@@ -1,4 +1,4 @@
-defmodule TmsApi.Repo.Driver do
+defmodule TmsApi.Repo.DriverRepo do
   @moduledoc """
   The Repo.Driver context.
   """
