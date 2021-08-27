@@ -7,6 +7,7 @@ defmodule TmsApiWeb.Router do
 
   scope "/api", TmsApiWeb do
     pipe_through :api
+    resources "/trucks", TruckController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development
