@@ -7,6 +7,8 @@
               {modules,['Elixir.TmsApi','Elixir.TmsApi.Application',
                         'Elixir.TmsApi.Repo','Elixir.TmsApi.Schema',
                         'Elixir.TmsApi.Schema.ShipmentList',
+                        'Elixir.TmsApi.Shipment',
+                        'Elixir.TmsApi.Shipment.ShipmentList',
                         'Elixir.TmsApiWeb','Elixir.TmsApiWeb.ChangesetView',
                         'Elixir.TmsApiWeb.Endpoint',
                         'Elixir.TmsApiWeb.ErrorHelpers',

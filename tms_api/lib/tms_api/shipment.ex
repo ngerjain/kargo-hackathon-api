@@ -1,12 +1,16 @@
-defmodule TmsApi.Schema do
+defmodule TmsApi.Shipment do
   @moduledoc """
-  The Schema context.
+  The Shipment context.
   """
 
   import Ecto.Query, warn: false
   alias TmsApi.Repo
 
+<<<<<<< HEAD:tms_api/lib/tms_api/schema.ex
   alias TmsApi.Schema.Truck
+=======
+  alias TmsApi.Shipment.ShipmentList
+>>>>>>> Add Shipment:tms_api/lib/tms_api/shipment.ex
 
   @doc """
   Returns the list of trucks.

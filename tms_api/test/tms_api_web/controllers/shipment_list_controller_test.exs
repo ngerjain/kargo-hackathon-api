@@ -1,33 +1,31 @@
 defmodule TmsApiWeb.ShipmentListControllerTest do
   use TmsApiWeb.ConnCase
 
-  alias TmsApi.Schema
-  alias TmsApi.Schema.ShipmentList
+  alias TmsApi.Shipment
+  alias TmsApi.Shipment.ShipmentList
 
-  @create_attrs %{
-    : "some ",
+  @create_attrs %{ 
     destination: "some destination",
     driver_id: "some driver_id",
-    license_number,: "some license_number,",
+    license_number: "some license_number",
     loading_date: "some loading_date",
     origin: "some origin",
     shipment_number: "some shipment_number",
     status: "some status"
   }
-  @update_attrs %{
-    : "some updated ",
+  @update_attrs %{ 
     destination: "some updated destination",
     driver_id: "some updated driver_id",
-    license_number,: "some updated license_number,",
+    license_number: "some updated license_number",
     loading_date: "some updated loading_date",
     origin: "some updated origin",
     shipment_number: "some updated shipment_number",
     status: "some updated status"
   }
-  @invalid_attrs %{"": nil, destination: nil, driver_id: nil, "license_number,": nil, loading_date: nil, origin: nil, shipment_number: nil, status: nil}
+  @invalid_attrs %{"": nil, destination: nil, driver_id: nil, license_number: nil, loading_date: nil, origin: nil, shipment_number: nil, status: nil}
 
   def fixture(:shipment_list) do
-    {:ok, shipment_list} = Schema.create_shipment_list(@create_attrs)
+    {:ok, shipment_list} = Shipment.create_shipment_list(@create_attrs)
     shipment_list
   end
 
@@ -50,11 +48,10 @@ defmodule TmsApiWeb.ShipmentListControllerTest do
       conn = get(conn, Routes.shipment_list_path(conn, :show, id))
 
       assert %{
-               "id" => id,
-               "" => "some ",
+               "id" => id, 
                "destination" => "some destination",
                "driver_id" => "some driver_id",
-               "license_number," => "some license_number,",
+               "license_number" => "some license_number",
                "loading_date" => "some loading_date",
                "origin" => "some origin",
                "shipment_number" => "some shipment_number",
@@ -78,11 +75,10 @@ defmodule TmsApiWeb.ShipmentListControllerTest do
       conn = get(conn, Routes.shipment_list_path(conn, :show, id))
 
       assert %{
-               "id" => id,
-               "" => "some updated ",
+               "id" => id, 
                "destination" => "some updated destination",
                "driver_id" => "some updated driver_id",
-               "license_number," => "some updated license_number,",
+               "license_number" => "some updated license_number",
                "loading_date" => "some updated loading_date",
                "origin" => "some updated origin",
                "shipment_number" => "some updated shipment_number",
