@@ -1,12 +1,12 @@
-defmodule TmsApi.Schema do
+defmodule TmsApi.Unit do
   @moduledoc """
-  The Schema context.
+  The Unit context.
   """
 
   import Ecto.Query, warn: false
   alias TmsApi.Repo
 
-  alias TmsApi.Schema.Truck
+  alias TmsApi.Unit.Truck
 
   @doc """
   Returns the list of trucks.

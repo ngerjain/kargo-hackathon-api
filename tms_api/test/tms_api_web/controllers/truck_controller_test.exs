@@ -1,8 +1,8 @@
 defmodule TmsApiWeb.TruckControllerTest do
   use TmsApiWeb.ConnCase
 
-  alias TmsApi.Schema
-  alias TmsApi.Schema.Truck
+  alias TmsApi.Unit
+  alias TmsApi.Unit.Truck
 
   @create_attrs %{
     kir_file: "some kir_file",
@@ -25,7 +25,7 @@ defmodule TmsApiWeb.TruckControllerTest do
   @invalid_attrs %{kir_file: nil, license_number: nil, license_type: nil, production_year: nil, status: nil, stnk_file: nil, truck_type: nil}
 
   def fixture(:truck) do
-    {:ok, truck} = Schema.create_truck(@create_attrs)
+    {:ok, truck} = Unit.create_truck(@create_attrs)
     truck
   end
 

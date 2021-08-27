@@ -20,12 +20,4 @@ defmodule TmsApiWeb.TruckView do
       kir_file: truck.kir_file,
       status: truck.status}
   end
-
-  # def render("types.json", %{types: types}) do
-  #   %{data: render_one(types, TruckView, "format_types.json")}
-  # end
-
-  # def render("format_types.json", %{types: types}) do
-  #   %{license_types: types.license_types, truck_types: types.truck_types}
-  # end
 end
