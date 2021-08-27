@@ -3,7 +3,7 @@ use Mix.Config
 # Configure your database
 config :tms_api, TmsApi.Repo,
   username: "postgres",
-  password: "rahasia",
+  password: "postgres",
   database: "tms_api_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
